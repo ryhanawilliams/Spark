@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Metropolis:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
 
 * {
     margin: 0;
@@ -19,7 +20,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
     overflow-x: hidden; /* Disable horizontal scrolling */
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling - temporarily */
     /* SVG is 1440x4625, so height = width * (4625/1440) = width * 3.21 */
     min-height: calc(100vw * 4625 / 1440);
 }
@@ -64,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Title container - positioned down and slightly right */
 .title-container {
     position: absolute;
-    top: 170px;
+    top: 140px;
     left: 150px;
     text-align: left;
 }
@@ -139,5 +140,52 @@ h1, h2, h3, h4, h5, h6 {
     height: 130px; /* Match SVG height */
     width: auto;
     margin-top: 5px;
+}
+
+/* Event date text */
+.event-date {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 24px;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 15px;
+    left: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 40px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navbar-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Thin */
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-link:hover {
+    opacity: 0.7;
 }
 
