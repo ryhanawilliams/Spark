@@ -250,47 +250,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media screen and (max-width: 480px) {
-    /* Navbar adjustments for mobile phones */
+    /* Make background much more zoomed in on mobile */
+    body {
+        background-size: 250% auto;
+        background-position: center top;
+    }
+    
+    /* Navbar adjustments for mobile phones - way smaller */
     .navbar {
-        padding: 10px 15px;
-        top: 5px;
+        padding: 5px 8px;
+        top: 3px;
         flex-wrap: wrap;
     }
     
     .navbar-logo {
-        height: 25px;
-        margin-right: 15px;
+        height: 12px;
+        margin-right: 8px;
     }
     
     .navbar-menu {
-        gap: 10px;
+        gap: 6px;
         flex-wrap: wrap;
     }
     
     .navbar-link {
-        font-size: 14px;
+        font-size: 8px;
     }
     
-    /* Title container adjustments for mobile */
+    /* Title container adjustments for mobile - way smaller */
     .title-container {
-        top: 80px;
-        left: 15px;
-        right: 15px;
+        top: 30px;
+        left: 8px;
+        right: 8px;
     }
     
-    /* Craft at text - much smaller for mobile */
+    /* Craft at text - way smaller for mobile */
     .craft-at {
-        font-size: 28px;
+        font-size: 12px;
     }
     
-    /* Word animation height adjustment for mobile */
+    /* Word animation height adjustment for mobile - way smaller */
     .word-animation {
-        height: 34px;
+        height: 15px;
     }
     
     .word-animation .word {
-        height: 34px;
-        line-height: 34px;
+        height: 15px;
+        line-height: 15px;
     }
     
     /* Update animation for mobile height - use different keyframe name */
@@ -298,22 +304,22 @@ h1, h2, h3, h4, h5, h6 {
         animation: slideWordsMobile 10s infinite;
     }
     
-    /* Spark title - smaller for mobile */
+    /* Spark title - way smaller for mobile */
     .spark-title {
-        height: 70px;
-        margin-top: 3px;
+        height: 30px;
+        margin-top: 1px;
     }
     
-    /* Event date - smaller for mobile */
+    /* Event date - way smaller for mobile */
     .event-date {
-        font-size: 14px;
-        margin-top: 15px;
-        line-height: 1.4;
+        font-size: 7px;
+        margin-top: 5px;
+        line-height: 1.2;
     }
     
-    /* At text spacing */
+    /* At text spacing - smaller */
     .at-text {
-        margin-left: 8px;
+        margin-left: 3px;
     }
 }
 
@@ -333,19 +339,19 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Mobile animation keyframes */
+/* Mobile animation keyframes - adjusted for much smaller heights */
 @keyframes slideWordsMobile {
     0%, 30% {
         transform: translateY(0);
     }
     33%, 63% {
-        transform: translateY(-34px);
+        transform: translateY(-15px);
     }
     66%, 96% {
-        transform: translateY(-68px);
+        transform: translateY(-30px);
     }
     100% {
-        transform: translateY(-102px);
+        transform: translateY(-45px);
     }
 }
 
