@@ -189,3 +189,163 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.7;
 }
 
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Navbar adjustments for tablets */
+    .navbar {
+        padding: 15px 20px;
+        top: 10px;
+        left: 0;
+    }
+    
+    .navbar-logo {
+        height: 30px;
+        margin-right: 20px;
+    }
+    
+    .navbar-menu {
+        gap: 15px;
+    }
+    
+    .navbar-link {
+        font-size: 18px;
+    }
+    
+    /* Title container adjustments */
+    .title-container {
+        top: 100px;
+        left: 20px;
+    }
+    
+    /* Craft at text - smaller */
+    .craft-at {
+        font-size: 40px;
+    }
+    
+    /* Word animation height adjustment */
+    .word-animation {
+        height: 48px;
+    }
+    
+    .word-animation .word {
+        height: 48px;
+        line-height: 48px;
+    }
+    
+    /* Update animation for smaller height - use different keyframe name */
+    .words-wrapper {
+        animation: slideWordsTablet 10s infinite;
+    }
+    
+    /* Spark title - smaller */
+    .spark-title {
+        height: 100px;
+    }
+    
+    /* Event date - smaller */
+    .event-date {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Navbar adjustments for mobile phones */
+    .navbar {
+        padding: 10px 15px;
+        top: 5px;
+        flex-wrap: wrap;
+    }
+    
+    .navbar-logo {
+        height: 25px;
+        margin-right: 15px;
+    }
+    
+    .navbar-menu {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .navbar-link {
+        font-size: 14px;
+    }
+    
+    /* Title container adjustments for mobile */
+    .title-container {
+        top: 80px;
+        left: 15px;
+        right: 15px;
+    }
+    
+    /* Craft at text - much smaller for mobile */
+    .craft-at {
+        font-size: 28px;
+    }
+    
+    /* Word animation height adjustment for mobile */
+    .word-animation {
+        height: 34px;
+    }
+    
+    .word-animation .word {
+        height: 34px;
+        line-height: 34px;
+    }
+    
+    /* Update animation for mobile height - use different keyframe name */
+    .words-wrapper {
+        animation: slideWordsMobile 10s infinite;
+    }
+    
+    /* Spark title - smaller for mobile */
+    .spark-title {
+        height: 70px;
+        margin-top: 3px;
+    }
+    
+    /* Event date - smaller for mobile */
+    .event-date {
+        font-size: 14px;
+        margin-top: 15px;
+        line-height: 1.4;
+    }
+    
+    /* At text spacing */
+    .at-text {
+        margin-left: 8px;
+    }
+}
+
+/* Tablet animation keyframes */
+@keyframes slideWordsTablet {
+    0%, 30% {
+        transform: translateY(0);
+    }
+    33%, 63% {
+        transform: translateY(-48px);
+    }
+    66%, 96% {
+        transform: translateY(-96px);
+    }
+    100% {
+        transform: translateY(-144px);
+    }
+}
+
+/* Mobile animation keyframes */
+@keyframes slideWordsMobile {
+    0%, 30% {
+        transform: translateY(0);
+    }
+    33%, 63% {
+        transform: translateY(-34px);
+    }
+    66%, 96% {
+        transform: translateY(-68px);
+    }
+    100% {
+        transform: translateY(-102px);
+    }
+}
+
