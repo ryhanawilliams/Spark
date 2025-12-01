@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Metropolis:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 400; /* Regular weight for everything by default */
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('assets/website_background.svg');
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    /* SVG is 1440x4625, so height = width * (4625/1440) = width * 3.21 */
+    min-height: calc(100vw * 4625 / 1440);
+}
+
+/* Dark mode scrollbar styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Firefox scrollbar styling */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1a1a1a;
+}
+
+/* Titles - bold weight */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Bold for titles */
+}
+
+/* Content container to ensure scrolling works - tall enough to show full SVG */
+.content {
+    width: 100%;
+    /* Match the SVG height so you can scroll to the bottom */
+    min-height: calc(100vw * 4625 / 1440);
+    position: relative;
+}
+
+/* Title container - positioned down and slightly right */
+.title-container {
+    position: absolute;
+    top: 170px;
+    left: 150px;
+    text-align: left;
+}
+
+/* "craft at" text */
+.craft-at {
+    font-size: 55px;
+    font-weight: 700; /* Bold */
+    color: white;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    font-family: 'Metropolis', sans-serif;
+}
+
+/* Word animation container - fixed position, only inner content moves */
+.word-animation {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 66px; /* Approximate line height for one word */
+    vertical-align: middle;
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 700;
+}
+
+/* Wrapper that moves - contains all words */
+.words-wrapper {
+    display: block;
+    animation: slideWords 10s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* Individual words */
+.word-animation .word {
+    display: block;
+    height: 66px;
+    line-height: 66px;
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 700;
+}
+
+/* "at" text with 60% opacity */
+.at-text {
+    opacity: 0.6;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+/* Animation keyframes - cycles through 3 words: craft, build, pitch, then loops back */
+@keyframes slideWords {
+    0%, 30% {
+        transform: translateY(0);
+    }
+    33%, 63% {
+        transform: translateY(-66px);
+    }
+    66%, 96% {
+        transform: translateY(-132px);
+    }
+    100% {
+        transform: translateY(-198px);
+    }
+}
+
+/* "Spark" title - SVG image */
+.spark-title {
+    display: block;
+    height: 130px; /* Match SVG height */
+    width: auto;
+    margin-top: 5px;
+}
+
