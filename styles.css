@@ -11,6 +11,7 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: #1a1a1a;
 }
 
 html, body {
@@ -23,10 +24,13 @@ body {
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    background-color: #1a1a1a;
     overflow-x: hidden; /* Disable horizontal scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
     /* SVG is 1440x4625, so height = width * (4625/1440) = width * 3.21 */
     min-height: calc(100vw * 4625 / 1440);
+    margin: 0;
+    padding: 0;
 }
 
 /* Dark mode scrollbar styling */
@@ -64,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
     /* Match the SVG height so you can scroll to the bottom */
     min-height: calc(100vw * 4625 / 1440);
     position: relative;
+    background-color: transparent;
 }
 
 /* Title container - positioned down and slightly right with gentle floating */
@@ -348,7 +353,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: 30px;
     flex: 0 0 auto;
     min-width: 500px;
-    border: 1px solid red;
 }
 
 .team-member-left {
@@ -362,10 +366,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Team photo */
 .team-photo {
-    width: 200px;
-    height: 200px;
     object-fit: contain;
     flex-shrink: 0;
+    display: block;
+    background: transparent;
 }
 
 /* Team info */
@@ -397,10 +401,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Sponsor section */
 .sponsor-section {
     margin-top: 880px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
 }
 
 /* Sponsor title */
