@@ -59,3 +59,59 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Team carousel functionality - auto-cycling
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('team-carousel');
+    
+    if (!carousel) return;
+    
+    const teamMembers = carousel.querySelectorAll('.team-member');
+    
+    if (teamMembers.length === 0) return;
+    
+    let currentIndex = 0;
+    const membersPerView = 1; // Show 1 member at a time
+    
+    // Calculate total slides (0-indexed)
+    const totalSlides = Math.max(0, teamMembers.length - membersPerView);
+    
+    // Function to update carousel position
+    function updateCarousel() {
+        if (teamMembers.length === 0) return;
+        
+        // Get the width of one member including gap
+        const firstMember = teamMembers[0];
+        const memberWidth = firstMember.offsetWidth || 500;
+        const gap = 300; // Match the gap in CSS
+        const slideWidth = memberWidth + gap;
+        
+        // Calculate translation - move by 1 member at a time
+        const translateX = -(currentIndex * slideWidth);
+        carousel.style.transform = `translateX(${translateX}px)`;
+    }
+    
+    // Auto-cycle function
+    function autoCycle() {
+        if (currentIndex < totalSlides) {
+            currentIndex++;
+        } else {
+            // Loop back to the beginning
+            currentIndex = 0;
+        }
+        updateCarousel();
+    }
+    
+    // Initialize
+    updateCarousel();
+    
+    // Auto-cycle every 4 seconds
+    setInterval(autoCycle, 4000);
+    
+    // Handle window resize
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(updateCarousel, 250);
+    });
+});
+
