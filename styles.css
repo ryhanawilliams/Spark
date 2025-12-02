@@ -243,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* What is Spark container */
 .what-is-spark-container {
-    margin-top: 740px;
+    margin-top: 620px;
     margin-left: -100px;
 }
 
@@ -298,6 +298,100 @@ h1, h2, h3, h4, h5, h6 {
 
 .spark-description p:last-child {
     margin-bottom: 0;
+}
+
+/* WDS Team section */
+.wds-team-section {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -100px;
+}
+
+.wds-team-title {
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 60px;
+    color: white;
+    margin: 0;
+    margin-bottom: 40px;
+    margin-left: 90px;
+}
+
+/* Team carousel wrapper */
+.team-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: 90px;
+}
+
+/* Team members container */
+.team-members-container {
+    display: flex;
+    gap: 300px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+
+/* Team member */
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 0 0 auto;
+    min-width: 500px;
+    border: 1px solid red;
+}
+
+.team-member-left {
+    justify-content: flex-start;
+}
+
+.team-member-right {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+/* Team photo */
+.team-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Team info */
+.team-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.team-name {
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 28px;
+    color: white;
+    margin: 0;
+    margin-top: -100px;
+}
+
+.team-title {
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    transform: scale(1.2);
+    margin-left: 15px;
 }
 
 /* Sponsor section */
@@ -504,6 +598,57 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 14px;
     }
     
+    /* WDS Team section - responsive for tablet */
+    .wds-team-section {
+        margin-top: 60px;
+        margin-left: 0;
+    }
+    
+    .wds-team-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+    
+    /* Team carousel wrapper - responsive for tablet */
+    .team-carousel-wrapper {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    
+    /* Team members container - responsive for tablet */
+    .team-members-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .team-member {
+        min-width: auto;
+    }
+    
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .team-member-right {
+        flex-direction: column;
+    }
+    
+    .team-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .team-name {
+        font-size: 24px;
+    }
+    
+    .team-title {
+        font-size: 16px;
+    }
+    
     /* Sponsor section - responsive for tablet */
     .sponsor-section {
         margin-top: 60px;
@@ -646,6 +791,55 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 1.5;
         margin-bottom: 15px;
     }
+    
+    /* WDS Team section - responsive for mobile */
+    .wds-team-section {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+    
+    .wds-team-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    /* Team carousel wrapper - responsive for mobile */
+    .team-carousel-wrapper {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    
+    /* Team members container - responsive for mobile */
+    .team-members-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-width: auto;
+    }
+    
+    .team-member-right {
+        flex-direction: column;
+    }
+    
+    .team-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .team-name {
+        font-size: 18px;
+    }
+    
+    .team-title {
+        font-size: 14px;
+    }
+    
     
     /* Sponsor section - responsive for mobile */
     .sponsor-section {
