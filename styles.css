@@ -243,8 +243,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* What is Spark container */
 .what-is-spark-container {
-    margin-top: 760px;
-    margin-left: -60px;
+    margin-top: 740px;
+    margin-left: -100px;
 }
 
 /* WDS Photos and description container */
@@ -298,6 +298,71 @@ h1, h2, h3, h4, h5, h6 {
 
 .spark-description p:last-child {
     margin-bottom: 0;
+}
+
+/* Sponsor section */
+.sponsor-section {
+    margin-top: 880px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sponsor title */
+.sponsor-title {
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 82px;
+    color: white;
+    margin: 0;
+}
+
+/* Sponsor description */
+.sponsor-description {
+    margin-top: 30px;
+    max-width: 800px;
+}
+
+.sponsor-description p {
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 500; /* Medium */
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sponsor-description p:last-child {
+    margin-bottom: 0;
+}
+
+.sponsor-email {
+    color: white;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.sponsor-email:hover {
+    opacity: 0.7;
+}
+
+/* Sponsor button */
+.sponsor-button-link {
+    display: inline-block;
+    margin-top: 40px;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-button-link:hover {
+    transform: scale(1.05);
+}
+
+.sponsor-button {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 300px;
 }
 
 /* Navbar */
@@ -439,6 +504,35 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 14px;
     }
     
+    /* Sponsor section - responsive for tablet */
+    .sponsor-section {
+        margin-top: 60px;
+    }
+    
+    /* Sponsor title - responsive for tablet */
+    .sponsor-title {
+        font-size: 36px;
+    }
+    
+    /* Sponsor description - responsive for tablet */
+    .sponsor-description {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    
+    .sponsor-description p {
+        font-size: 16px;
+    }
+    
+    /* Sponsor button - responsive for tablet */
+    .sponsor-button-link {
+        margin-top: 30px;
+    }
+    
+    .sponsor-button {
+        max-width: 250px;
+    }
+    
     /* Petals - smaller for tablet */
     .petal {
         width: 30px;
@@ -551,6 +645,37 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 11px;
         line-height: 1.5;
         margin-bottom: 15px;
+    }
+    
+    /* Sponsor section - responsive for mobile */
+    .sponsor-section {
+        margin-top: 40px;
+    }
+    
+    /* Sponsor title - responsive for mobile */
+    .sponsor-title {
+        font-size: 24px;
+    }
+    
+    /* Sponsor description - responsive for mobile */
+    .sponsor-description {
+        margin-top: 15px;
+        max-width: 100%;
+    }
+    
+    .sponsor-description p {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    /* Sponsor button - responsive for mobile */
+    .sponsor-button-link {
+        margin-top: 20px;
+    }
+    
+    .sponsor-button {
+        max-width: 200px;
     }
     
     /* At text spacing */

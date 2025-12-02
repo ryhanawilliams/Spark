@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const aboutLink = document.getElementById('about-link');
     const aboutSection = document.getElementById('about');
+    const sponsorsLink = document.getElementById('sponsors-link');
+    const sponsorsSection = document.getElementById('sponsors');
     
     // Function to check if section is in view
     function isInViewport(element) {
@@ -20,10 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to update active state
     function updateActiveLink() {
-        if (isInViewport(aboutSection)) {
+        // Remove active from all links first
+        aboutLink.classList.remove('active');
+        sponsorsLink.classList.remove('active');
+        
+        // Check which section is in view
+        if (isInViewport(sponsorsSection)) {
+            sponsorsLink.classList.add('active');
+        } else if (isInViewport(aboutSection)) {
             aboutLink.classList.add('active');
-        } else {
-            aboutLink.classList.remove('active');
         }
     }
     
@@ -37,6 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
     aboutLink.addEventListener('click', function(e) {
         e.preventDefault();
         aboutSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+    
+    // Handle click on SPONSORS link
+    sponsorsLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        sponsorsSection.scrollIntoView({ 
             behavior: 'smooth',
             block: 'start'
         });
