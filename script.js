@@ -115,3 +115,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Loading Screen
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        // Wait at least 2 seconds before hiding
+        setTimeout(function() {
+            // Add fade-out class
+            loadingScreen.classList.add('fade-out');
+            // Remove from DOM after animation
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 2000);
+    }
+});
+
