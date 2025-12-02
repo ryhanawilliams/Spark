@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const aboutSection = document.getElementById('about');
     const sponsorsLink = document.getElementById('sponsors-link');
     const sponsorsSection = document.getElementById('sponsors');
+    const faqLink = document.getElementById('faq-link');
+    const faqSection = document.getElementById('faq');
     
     // Function to check if section is in view
     function isInViewport(element) {
@@ -25,9 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove active from all links first
         aboutLink.classList.remove('active');
         sponsorsLink.classList.remove('active');
+        if (faqLink) faqLink.classList.remove('active');
         
         // Check which section is in view
-        if (isInViewport(sponsorsSection)) {
+        if (faqSection && isInViewport(faqSection)) {
+            if (faqLink) faqLink.classList.add('active');
+        } else if (isInViewport(sponsorsSection)) {
             sponsorsLink.classList.add('active');
         } else if (isInViewport(aboutSection)) {
             aboutLink.classList.add('active');
@@ -56,6 +61,36 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth',
             block: 'start'
         });
+    });
+    
+    // Smooth scroll for FAQ link
+    if (faqLink && faqSection) {
+        faqLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            faqSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
+    
+    // FAQ accordion functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', function() {
+                const isActive = item.classList.contains('active');
+                // Close all items
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
     });
 });
 
